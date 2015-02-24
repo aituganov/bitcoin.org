@@ -1312,17 +1312,53 @@ table td,table th{
 }
 
 .wallets{
-	width:605px;
-	height:250px;
+    width: 100%;
+    height: 100%;
 	text-align:left;
 	position:relative;
-	margin:auto;
 	padding:40px 0 20px 0;
 	font-size:0;
 	opacity:1;
 	-moz-transition:opacity 400ms ease-out;
 	-webkit-transition:opacity 400ms ease-out;
 	transition:opacity 400ms ease-out;
+}
+.wallets>div.nohover:hover>a>span.wallet-item-sponsored{
+    display: block;
+}
+.wallets-container{
+  width:605px;
+  min-height: 180px;
+  margin:auto;
+}
+.wallet-item-container .wallet-item .wallet-item-sponsored{
+  color: #F79C44;
+  display: block;
+  position: relative;
+  background: none;
+}
+.wallets>div:hover>span{
+  display:none;
+}
+.wallets.sponsored{
+  height: 140px;
+}
+.show-more-container{
+  text-align: center;
+  a {
+    color: #F79C44;
+  }
+}
+.wallets>div>div{
+  z-index: 99;
+  border:solid 2px #2c6faf;
+  background-color:#f1f8fb;
+  -moz-transition:opacity 400ms ease-out;
+  -webkit-transition:opacity 400ms ease-out;
+  transition:opacity 400ms ease-out;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  border-radius:4px;
 }
 .wallets.disabled{
 	opacity:0;
@@ -1420,9 +1456,6 @@ table td,table th{
 	-webkit-border-radius:4px;
 	-moz-border-radius:4px;
 	border-radius:4px;
-}
-.wallets>div>div{
-	z-index:102;
 }
 .wallets>div:hover>div,
 .wallets>div:hover>span{
@@ -2374,9 +2407,14 @@ h2 .rssicon{
 		min-width:0;
 	}
 	.wallets{
-		width:auto;
-		height:auto;
+        width:100%;
+        height:100%;
 	}
+    .wallets-container{
+        width:auto;
+        height:auto;
+        min-height: 180px;
+    }
 	.wallets>div:hover>span{
 		display:none;
 	}
