@@ -159,7 +159,7 @@ lsi:         false
 highlighter: rouge
 pygments:    true
 markdown:    kramdown
-permalink:   date
+permalink:   pretty
 
 rdiscount:
   extensions: []
